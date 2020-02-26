@@ -40,11 +40,16 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
   },
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint && yarn format"
     }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": ["eslint --fix", "git add"],
+    "*.+(json|css|md)": ["prettier --write", "git add"]
   }
 }
