@@ -31,7 +31,7 @@ eslint-plugin-react@latest
 ? Would you like to install them now with npm? Yes
 ```
 
-### Include jest key to .eslintrc.json
+Include jest key to .eslintrc.json
 
 ```json
  "env": {
@@ -39,7 +39,7 @@ eslint-plugin-react@latest
   },
 ```
 
-### Include eslint scripts to package.json
+Include eslint scripts to package.json
 
 ```json
   "scripts": {
@@ -87,7 +87,7 @@ Include prettier scripts to format files in package.json
   },
 ```
 
-## Configure pre-commit hooks with husky
+## Install and configure pre-commit hooks with husky
 
 Install husky dependency
 
@@ -105,7 +105,7 @@ Configure hooks to package.json, for exampple:
 }
 ```
 
-## Configure lint-staged
+## Install and configure lint staged files
 
 Install lint-staged dependency
 
