@@ -50,8 +50,47 @@ eslint-plugin-react@latest
 
 ## Install Prettier
 
+Install prettier, eslint-config-prettier and eslint-plugin-prettier dependencies
+
+```bash
+yarn add prettier -D
+yarn add eslint-config-prettier --dev
+yarn add eslint-plugin-prettier --dev
+```
+
 ## Configure Prettier
+
+Create .prettierrc file with your rules, for example:
+
+```json
+{
+  "singleQuote": true,
+  "bracketSpacing": false,
+  "trailingComma": "es5",
+  "tabWidth": 2
+}
+```
+
+Include "plugin:prettier/recommended" to eslintrc or package.json for disables rules that conflict with Prettier
+
+```json
+"extends": [
+    "plugin:prettier/recommended"
+  ],
+```
+
+Include prettier scripts to format files in package.json
+
+```json
+ "scripts": {
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
+  },
+```
 
 ## Integrate Prettier with ESLint
 
 ## Lint and format at each commit
+
+```
+
+```
