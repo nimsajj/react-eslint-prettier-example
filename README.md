@@ -87,10 +87,45 @@ Include prettier scripts to format files in package.json
   },
 ```
 
-## Integrate Prettier with ESLint
+## Configure pre-commit hooks with husky
 
-## Lint and format at each commit
+Install husky dependency
 
+```bash
+yarn add husky -D
 ```
 
+Configure hooks to package.json, for exampple:
+
+```json
+"husky": {
+    "hooks": {
+        "pre-commit": "yarn lint && yarn format"
+    }
+}
 ```
+
+## Configure lint-staged
+
+Install lint-staged dependency
+
+```bash
+yarn add lint-staged -D
+```
+
+Add config to package.json, for example:
+
+```json
+  "lint-staged": {
+    "*.+(js|jsx)": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+```
+
+**Note: Use lint-staged command to pre-commit hook ("pre-commit": "lint-staged")**
